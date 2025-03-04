@@ -5,18 +5,19 @@ import { div, p } from "framer-motion/client";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 
 interface Course {
-  id: string;
-  title: string;
-  slug: string;
-  description: string;
-  price: number;
-  instructor: string;
-  isFeatured: boolean;
+  id: number,
+  title: string,
+  slug: string,
+  description: string,
+  price: number,
+  instructor: string,
+  isFeatured: boolean,
 }
+
 
 function FeaturedCourses() {
   const featuredCourses = courseData.courses.filter(
-    (course: Course) => course.isFeatured);
+    (course:Course) => course.isFeatured)
 
   return (
     <div className="py-12 bg-gray-900 text-white">
